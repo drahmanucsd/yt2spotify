@@ -1,23 +1,5 @@
-# INTERNAL NOTES
-
-[Stack exchnage to pull yt chapters](https://stackoverflow.com/questions/63821605/how-do-i-get-info-about-a-youtube-videos-chapters-from-the-api)
-
-yt api docu
-https://developers.google.com/youtube/v3/docs/playlists/list
-
-spotify api docu
-https://developer.spotify.com/documentation/web-api/reference/add-tracks-to-playlist
-
-
-https://stackoverflow.com/questions/18804904/retrieve-all-videos-from-youtube-playlist-using-youtube-v3-api
-
-https://stackoverflow.com/questions/52561945/google-oauth-developer-verification-form-submitted-but-no-response-from-googleq
-
-
-Outputs:
-{
-  "kind": "youtube#playlistListResponse",
-  "etag": "b5ctl_ao_-UzivjJ8Ao4UgscTAg",
+##THROWAWAY TESTING FILE
+response = {"kind": "youtube#playlistListResponse","etag": "b5ctl_ao_-UzivjJ8Ao4UgscTAg",
   "pageInfo": {
     "totalResults": 4,
     "resultsPerPage": 10
@@ -195,39 +177,5 @@ Outputs:
 
 
 
-
-
-
-
-
-
-{
-  "kind": "youtube#playlistListResponse",
-  "etag": "SnsJ7_-QISL9z1cjZLhfBpwMfFg",
-  "pageInfo": {
-    "totalResults": 4,
-    "resultsPerPage": 25
-  },
-  "items": [
-    {
-      "kind": "youtube#playlist",
-      "etag": "Kx65SxPjgNa2p7wsZEkLy6C2HHU",
-      "id": "PLWDhtSiJQSdSORnqzU-jh7O7uVtorlSEA"
-    },
-    {
-      "kind": "youtube#playlist",
-      "etag": "l5eisgSC0kFk0LUmO8WsisfaZPc",
-      "id": "PLWDhtSiJQSdRf_OgbtnbPD0Ub03mY-tGX"
-    },
-    {
-      "kind": "youtube#playlist",
-      "etag": "OdRw2mtEc_qKEFv5xYvQbirvrg4",
-      "id": "PLWDhtSiJQSdQqlBCi_ctinHYgxRl6lcnd"
-    },
-    {
-      "kind": "youtube#playlist",
-      "etag": "sFcnaZQtTCdkA2F2Fd6IZpo8UvQ",
-      "id": "PLWDhtSiJQSdQYKR6aE2A0WC8j6y9O8Bq8"
-    }
-  ]
-}
+a = [x['id'] for x in response['items']]
+print(a)
